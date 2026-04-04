@@ -1,6 +1,5 @@
 import { Link } from 'react-router';
 import { Hero } from '../components/Hero';
-import { ImageWithFallback } from '../components/ImageWithFallback';
 import { BookOpen, Users, Globe, ArrowRight } from 'lucide-react';
 
 export function Home() {
@@ -13,9 +12,9 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1678225892688-e4a3bd3d9214?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxSd2FuZGElMjBjb21tdW5pdHklMjB3b21lbiUyMGVtcG93ZXJtZW50fGVufDF8fHx8MTc3NTI1NDU0MXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Community member"
+              <img
+                src="/assets/Suzanne-in-community-outreach.jpg"
+                alt="Suzanne during community outreach"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -64,7 +63,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Books Preview */}
+      {/* Featured Book */}
       <section className="py-20 md:py-32 bg-[var(--kidspedia-light-green)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -74,15 +73,14 @@ export function Home() {
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-0 items-center">
               <div className="p-8 flex items-center justify-center bg-gradient-to-br from-[var(--kidspedia-light-yellow)] to-white">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1581544291234-31340be4b1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyN3MlMjBib29rJTIwYWxwaGFiZXQlMjBjb2xvcmZ1bHxlbnwxfHx8fDE3NzUyNTQ1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                <img
+                  src="/assets/ABC OF ANAYA COVER.jpg"
                   alt="ABC of Anaya book cover"
-                  className="w-48 md:w-64 h-auto shadow-2xl rounded-2xl"
+                  className="w-48 md:w-64 h-auto shadow-2xl rounded-2xl object-cover"
                 />
               </div>
-
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-[var(--kidspedia-charcoal)] mb-4">
                   ABC of Anaya: An Alphabet of Loving Affirmations
@@ -110,28 +108,21 @@ export function Home() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--kidspedia-charcoal)] mb-4">
               Our <span className="text-[var(--kidspedia-green)]">Impact</span>
             </h2>
-            <p className="text-lg text-gray-700">
-              Creating real change in the lives of women and children across Rwanda.
-            </p>
+            <p className="text-lg text-gray-700">Creating real change in the lives of women and children across Rwanda.</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-[var(--kidspedia-light-green)] to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl font-bold text-[var(--kidspedia-green)] mb-2">300+</div>
-              <div className="text-gray-600">Families Supported</div>
-            </div>
-            <div className="bg-gradient-to-br from-[var(--kidspedia-light-yellow)] to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl font-bold text-[var(--kidspedia-yellow)] mb-2">1,000</div>
-              <div className="text-gray-600">Women Targeted</div>
-            </div>
-            <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl font-bold text-[var(--kidspedia-sky-blue)] mb-2">1,500+</div>
-              <div className="text-gray-600">Books Distributed</div>
-            </div>
-            <div className="bg-gradient-to-br from-[var(--kidspedia-light-green)] to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
-              <div className="text-4xl font-bold text-[var(--kidspedia-green)] mb-2">100%</div>
-              <div className="text-gray-600">Profits to Community</div>
-            </div>
+            {[
+              { number: '300+', label: 'Families Supported', color: 'text-[var(--kidspedia-green)]' },
+              { number: '1,000', label: 'Women Targeted', color: 'text-[var(--kidspedia-yellow)]' },
+              { number: '1,500+', label: 'Books Distributed', color: 'text-[var(--kidspedia-sky-blue)]' },
+              { number: '100%', label: 'Profits to Community', color: 'text-[var(--kidspedia-green)]' },
+            ].map(({ number, label, color }) => (
+              <div key={label} className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
+                <div className={`text-4xl font-bold ${color} mb-2`}>{number}</div>
+                <div className="text-gray-600">{label}</div>
+              </div>
+            ))}
           </div>
 
           <div className="text-center">

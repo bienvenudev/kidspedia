@@ -10,55 +10,32 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Tagline */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex flex-col items-center">
-                <div className="flex items-center gap-1">
-                  <div className="w-10 h-10 bg-[var(--kidspedia-green)] rounded-lg flex items-center justify-center relative">
-                    <span className="text-white font-bold text-xl">K</span>
-                    <div className="absolute -right-1 -bottom-1 w-4 h-4 bg-[var(--kidspedia-yellow)] rounded-full"></div>
-                  </div>
-                </div>
-                <div className="flex items-center mt-0.5">
-                  <span className="text-[var(--kidspedia-green)] font-semibold">kids</span>
-                  <span className="text-[var(--kidspedia-yellow)] font-semibold">pedia</span>
-                </div>
-              </div>
+            <div className="mb-4">
+              <img
+                src="/assets/kidspedia-logo.PNG"
+                alt="Kidspedia"
+                className="h-12 w-auto rounded-sm"
+              />
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Your child's learning. A woman's future. One book at a time.
             </p>
             {/* Social Media */}
             <div className="flex gap-4">
-              <a
-                href="https://facebook.com/kidspedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all"
-              >
+              <a href="https://facebook.com/kidspedia" target="_blank" rel="noopener noreferrer"
+                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
                 <Facebook size={20} />
               </a>
-              <a
-                href="https://instagram.com/kidspedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all"
-              >
+              <a href="https://instagram.com/kidspedia" target="_blank" rel="noopener noreferrer"
+                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
                 <Instagram size={20} />
               </a>
-              <a
-                href="https://twitter.com/kidspedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all"
-              >
+              <a href="https://twitter.com/kidspedia" target="_blank" rel="noopener noreferrer"
+                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
                 <Twitter size={20} />
               </a>
-              <a
-                href="https://linkedin.com/company/kidspedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all"
-              >
+              <a href="https://linkedin.com/company/kidspedia" target="_blank" rel="noopener noreferrer"
+                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -68,26 +45,18 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-[var(--kidspedia-yellow)]">Quick Links</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/books" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Our Books
-                </Link>
-              </li>
-              <li>
-                <Link to="/impact" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Our Impact
-                </Link>
-              </li>
+              {[
+                { to: '/', label: 'Home' },
+                { to: '/about', label: 'About Us' },
+                { to: '/books', label: 'Our Books' },
+                { to: '/impact', label: 'Our Impact' },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -95,21 +64,17 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-[var(--kidspedia-yellow)]">More</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/gallery" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link to="/get-involved" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Get Involved
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
-                  Contact
-                </Link>
-              </li>
+              {[
+                { to: '/gallery', label: 'Gallery' },
+                { to: '/get-involved', label: 'Get Involved' },
+                { to: '/contact', label: 'Contact' },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-gray-300 hover:text-[var(--kidspedia-green)] transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -121,12 +86,8 @@ export function Footer() {
               © {currentYear} Kidspedia. All rights reserved. Made with love in Rwanda.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-[var(--kidspedia-green)] transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[var(--kidspedia-green)] transition-colors">
-                Terms of Service
-              </a>
+              <a href="#" className="text-gray-400 hover:text-[var(--kidspedia-green)] transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-[var(--kidspedia-green)] transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>

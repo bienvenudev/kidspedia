@@ -10,19 +10,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center cursor-pointer">
-            <div className="flex flex-col items-center">
-              <div className="flex items-center gap-1">
-                <div className="w-8 h-8 md:w-10 md:h-10 bg-[var(--kidspedia-green)] rounded-lg flex items-center justify-center relative">
-                  <span className="text-white font-bold text-lg md:text-xl">K</span>
-                  <div className="absolute -right-1 -bottom-1 w-3 h-3 md:w-4 md:h-4 bg-[var(--kidspedia-yellow)] rounded-full"></div>
-                </div>
-              </div>
-              <div className="flex items-center mt-0.5">
-                <span className="text-[var(--kidspedia-green)] font-semibold text-sm md:text-base">kids</span>
-                <span className="text-[var(--kidspedia-yellow)] font-semibold text-sm md:text-base">pedia</span>
-              </div>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/assets/kidspedia-logo.PNG"
+              alt="Kidspedia"
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,24 +60,23 @@ export function Navigation() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-3">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              Home
-            </Link>
-            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              About Us
-            </Link>
-            <Link to="/books" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              Our Books
-            </Link>
-            <Link to="/impact" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              Our Impact
-            </Link>
-            <Link to="/gallery" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              Gallery
-            </Link>
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]">
-              Contact
-            </Link>
+            {[
+              { to: '/', label: 'Home' },
+              { to: '/about', label: 'About Us' },
+              { to: '/books', label: 'Our Books' },
+              { to: '/impact', label: 'Our Impact' },
+              { to: '/gallery', label: 'Gallery' },
+              { to: '/contact', label: 'Contact' },
+            ].map(({ to, label }) => (
+              <Link
+                key={to}
+                to={to}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]"
+              >
+                {label}
+              </Link>
+            ))}
             <Link
               to="/get-involved"
               onClick={() => setMobileMenuOpen(false)}

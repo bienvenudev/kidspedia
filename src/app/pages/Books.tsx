@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import { ImageWithFallback } from '../components/ImageWithFallback';
 import { Star, Heart, Palette } from 'lucide-react';
 
 export function Books() {
@@ -16,21 +15,21 @@ export function Books() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Featured Book */}
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12">
+            <div className="grid md:grid-cols-2 gap-0 items-center">
+              {/* Book Cover */}
               <div className="p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-[var(--kidspedia-light-yellow)] to-white">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-[var(--kidspedia-yellow)]/20 blur-3xl rounded-full"></div>
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1581544291234-31340be4b1b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyN3MlMjBib29rJTIwYWxwaGFiZXQlMjBjb2xvcmZ1bHxlbnwxfHx8fDE3NzUyNTQ1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="ABC of Anaya book cover"
-                    className="relative w-64 md:w-80 h-auto shadow-2xl rounded-2xl"
-                  />
-                </div>
+                <img
+                  src="/assets/ABC OF ANAYA COVER.jpg"
+                  alt="ABC of Anaya book cover"
+                  className="w-64 md:w-80 h-auto shadow-2xl rounded-2xl object-cover"
+                />
               </div>
 
-              <div className="p-8 md:p-12 md:pl-0">
-                <div className="inline-block bg-[var(--kidspedia-yellow)] text-[var(--kidspedia-charcoal)] px-4 py-1 rounded-full mb-4">
+              {/* Book Details */}
+              <div className="p-8 md:p-12">
+                <div className="inline-block bg-[var(--kidspedia-yellow)] text-[var(--kidspedia-charcoal)] px-4 py-1 rounded-full mb-4 text-sm font-semibold">
                   Featured Book
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[var(--kidspedia-charcoal)] mb-4">
@@ -71,8 +70,28 @@ export function Books() {
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-gray-600 italic">More books coming soon...</p>
+          {/* Copies / In the Community */}
+          <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0 items-center">
+              <div className="p-8 md:p-12 order-2 md:order-1">
+                <h3 className="text-2xl font-bold text-[var(--kidspedia-charcoal)] mb-4">
+                  Books in the Community
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Each copy of the ABC of Anaya represents both a child's learning journey and a woman's livelihood. Our books are distributed at community events, schools, and through our network of partners across Rwanda.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  100% of profits go directly back to the community — funding training, workshops, and economic opportunities for women.
+                </p>
+              </div>
+              <div className="order-1 md:order-2">
+                <img
+                  src="/assets/ABC OF ANAYA COPIES.jpg"
+                  alt="Multiple copies of ABC of Anaya"
+                  className="w-full h-72 md:h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

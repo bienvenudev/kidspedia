@@ -1,16 +1,16 @@
-import { ImageWithFallback } from '../components/ImageWithFallback';
 import { BookOpen, Users, Globe } from 'lucide-react';
 
 export function About() {
   return (
     <div className="pt-16 md:pt-20">
-      <section id="about" className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Suzanne's portrait */}
             <div className="order-2 md:order-1 rounded-3xl overflow-hidden shadow-2xl">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1678225892688-e4a3bd3d9214?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxSd2FuZGElMjBjb21tdW5pdHklMjB3b21lbiUyMGVtcG93ZXJtZW50fGVufDF8fHx8MTc3NTI1NDU0MXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Community member"
+              <img
+                src="/assets/Suzanne Portrait.jpg"
+                alt="Suzanne, Kidspedia Founder"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -1,18 +1,16 @@
 import { Link } from 'react-router';
-import { ImageWithFallback } from './ImageWithFallback';
 
 export function Hero() {
-
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1774686030499-27af852cbc73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY2hpbGRyZW4lMjByZWFkaW5nJTIwYm9va3MlMjBsZWFybmluZ3xlbnwxfHx8fDE3NzUyNTQ1NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Children reading books"
+        <img
+          src="/assets/Community-Outreach.jpg"
+          alt="Kidspedia community outreach"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--kidspedia-charcoal)]/80 via-[var(--kidspedia-charcoal)]/70 to-[var(--kidspedia-green)]/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--kidspedia-charcoal)]/85 via-[var(--kidspedia-charcoal)]/70 to-[var(--kidspedia-green)]/50"></div>
       </div>
 
       {/* Content */}
@@ -44,7 +42,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
     </section>
   );
