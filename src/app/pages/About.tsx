@@ -14,7 +14,7 @@ export function About() {
               Kidspedia is an international platform of education professionals and board members dedicated to creating multilingual children's learning materials that spark joy and foster growth.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Based in Kigali, Rwanda, we sit at the intersection of childhood education and women's empowerment — promoting literacy in French, English, and Kinyarwanda while uplifting low-income families across our community.
+              Based in Kigali, Rwanda, we sit at the intersection of childhood education and women's empowerment — working to promote literacy across English, French, and Kinyarwanda while uplifting low-income families across our community.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export function About() {
                 <BookOpen className="text-white" size={28} />
               </div>
               <h3 className="font-semibold text-[var(--kidspedia-charcoal)] mb-2">Multilingual Learning</h3>
-              <p className="text-gray-700 text-sm">Books in French, English, and Kinyarwanda celebrating linguistic diversity.</p>
+              <p className="text-gray-700 text-sm">Currently publishing in English, with French and Kinyarwanda editions in development.</p>
             </div>
 
             <div className="flex flex-col items-center text-center p-6 bg-[var(--kidspedia-light-yellow)] rounded-2xl">

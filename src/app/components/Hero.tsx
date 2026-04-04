@@ -22,7 +22,7 @@ export function Hero() {
             One Book at a Time.
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-            Multilingual children's books in French, English, and Kinyarwanda that fund women's empowerment in Rwanda.
+            Children's books that fund women's empowerment in Rwanda, currently in English with French and Kinyarwanda editions on the way.
             Every purchase creates opportunity for low-income families and puts learning in a child's hands.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

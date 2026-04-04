@@ -44,7 +44,7 @@ export function Books() {
                     <div className="bg-[var(--kidspedia-green)] p-2 rounded-lg">
                       <Star className="text-white" size={20} />
                     </div>
-                    <span className="text-gray-700">Multilingual: French, English &amp; Kinyarwanda</span>
+                    <span className="text-gray-700">Currently in English. French &amp; Kinyarwanda editions coming soon</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="bg-[var(--kidspedia-yellow)] p-2 rounded-lg">

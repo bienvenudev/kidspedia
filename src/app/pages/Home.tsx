@@ -86,7 +86,7 @@ export function Home() {
                   ABC of Anaya: An Alphabet of Loving Affirmations
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  A beautiful children's affirmation and coloring book in French, English &amp; Kinyarwanda.
+                  A beautiful children's affirmation and coloring book — currently in English, with French &amp; Kinyarwanda editions coming soon.
                 </p>
                 <Link
                   to="/books"
