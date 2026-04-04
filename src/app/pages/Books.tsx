@@ -81,7 +81,7 @@ export function Books() {
                   Each copy of the ABC of Anaya represents both a child's learning journey and a woman's livelihood. Our books are distributed at community events, schools, and through our network of partners across Rwanda.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  100% of profits go directly back to the community — funding training, workshops, and economic opportunities for women.
+                  A meaningful share of every sale is reinvested into the community — funding training, workshops, and economic opportunities for women.
                 </p>
               </div>
               <div className="order-1 md:order-2">
