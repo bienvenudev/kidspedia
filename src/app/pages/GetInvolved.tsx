@@ -1,4 +1,4 @@
-import { ShoppingBag, Gift, Share2, MessageCircle } from 'lucide-react';
+import { ShoppingBag, Gift, Share2, MessageCircle, Instagram } from 'lucide-react';
 
 export function GetInvolved() {
   const whatsappOrderMessage = encodeURIComponent("Hi! I'd like to order the ABC of Anaya book from Kidspedia.");
@@ -45,7 +45,7 @@ export function GetInvolved() {
                 </div>
               </div>
               <a
-                href={`https://wa.me/250788000000?text=${whatsappOrderMessage}`}
+                href={`https://wa.me/+33601402401?text=${whatsappOrderMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[var(--kidspedia-green)] text-white px-6 py-4 rounded-full hover:bg-[var(--kidspedia-green)]/90 transition-all shadow-lg"
@@ -70,7 +70,7 @@ export function GetInvolved() {
                 <li className="flex items-start"><span className="text-[var(--kidspedia-green)] mr-2">✓</span><span>Impact reporting included</span></li>
               </ul>
               <a
-                href={`https://wa.me/250788000000?text=${whatsappSponsorMessage}`}
+                href={`https://wa.me/+33601402401?text=${whatsappSponsorMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[var(--kidspedia-yellow)] text-[var(--kidspedia-charcoal)] px-6 py-4 rounded-full hover:bg-[var(--kidspedia-yellow)]/90 transition-all shadow-lg"
@@ -91,7 +91,15 @@ export function GetInvolved() {
               </p>
               <div className="space-y-3">
                 <button onClick={() => handleShare('twitter')} className="w-full bg-gray-100 text-[var(--kidspedia-charcoal)] px-6 py-3 rounded-full hover:bg-gray-200 transition-all">Share on Twitter</button>
-                <button onClick={() => handleShare('facebook')} className="w-full bg-gray-100 text-[var(--kidspedia-charcoal)] px-6 py-3 rounded-full hover:bg-gray-200 transition-all">Share on Facebook</button>
+                <a
+                  href="https://www.instagram.com/kidspedia.io_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 bg-gray-100 text-[var(--kidspedia-charcoal)] px-6 py-3 rounded-full hover:bg-gray-200 transition-all"
+                >
+                  <Instagram size={18} />
+                  Follow on Instagram
+                </a>
                 <button onClick={() => handleShare('linkedin')} className="w-full bg-gray-100 text-[var(--kidspedia-charcoal)] px-6 py-3 rounded-full hover:bg-gray-200 transition-all">Share on LinkedIn</button>
               </div>
             </div>

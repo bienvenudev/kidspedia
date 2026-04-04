@@ -22,21 +22,9 @@ export function Footer() {
             </p>
             {/* Social Media */}
             <div className="flex gap-4">
-              <a href="https://facebook.com/kidspedia" target="_blank" rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
-                <Facebook size={20} />
-              </a>
-              <a href="https://instagram.com/kidspedia" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/kidspedia.io_/" target="_blank" rel="noopener noreferrer"
                 className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
                 <Instagram size={20} />
-              </a>
-              <a href="https://twitter.com/kidspedia" target="_blank" rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
-                <Twitter size={20} />
-              </a>
-              <a href="https://linkedin.com/company/kidspedia" target="_blank" rel="noopener noreferrer"
-                className="bg-white/10 p-3 rounded-xl hover:bg-[var(--kidspedia-green)] transition-all">
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
