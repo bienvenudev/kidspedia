@@ -7,7 +7,6 @@ const galleryImages = [
   { src: '/assets/ABC OF ANAYA COVER.jpg', alt: 'ABC of Anaya — book cover' },
   { src: '/assets/Suzanne-in-community-outreach.jpg', alt: 'Suzanne during community outreach' },
   { src: '/assets/ABC OF ANAYA COPIES.jpg', alt: 'ABC of Anaya — multiple copies' },
-  { src: '/assets/Suzanne Portrait.jpg', alt: 'Suzanne, Kidspedia Founder' },
   { src: '/assets/IMG-20241011-WA0040.jpg', alt: 'Kidspedia community event' },
 ];
 

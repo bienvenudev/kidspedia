@@ -15,7 +15,7 @@ export function Home() {
               <img
                 src="/assets/Suzanne-in-community-outreach.jpg"
                 alt="Suzanne during community outreach"
-                className="w-full h-full object-cover"
+                className="w-full h-80 md:h-[480px] object-cover object-center"
               />
             </div>
 

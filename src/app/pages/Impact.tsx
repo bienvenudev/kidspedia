@@ -40,9 +40,9 @@ export function Impact() {
               <img
                 src="/assets/Suzanne-in-community-outreach.jpg"
                 alt="Suzanne during community outreach"
-                className="w-full h-72 md:h-full object-cover"
+                className="w-full h-72 md:h-96 object-cover object-center"
               />
-              <div className="bg-gradient-to-br from-[var(--kidspedia-light-green)] to-[var(--kidspedia-light-yellow)] p-8 md:p-12">
+              <div className="bg-white p-8 md:p-12">
                 <h3 className="text-2xl md:text-3xl font-bold text-[var(--kidspedia-charcoal)] mb-6">
                   Creating Opportunity Through Education
                 </h3>
