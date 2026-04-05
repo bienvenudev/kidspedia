@@ -19,7 +19,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden min-[860px]:flex items-center gap-8">
             {[
               { to: '/', label: 'Home', end: true },
               { to: '/about', label: 'About Us' },
@@ -54,7 +54,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-[var(--kidspedia-charcoal)]"
+            className="min-[860px]:hidden p-2 text-[var(--kidspedia-charcoal)]"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -63,7 +63,7 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
+        <div className="min-[860px]:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-3">
             {[
               { to: '/', label: 'Home', end: true },
