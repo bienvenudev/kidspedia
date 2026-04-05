@@ -1,3 +1,24 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+/* Sliding underline nav effect */
+.nav-underline {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--kidspedia-green);
+  border-radius: 9999px;
+  transition: width 0.25s ease;
+}
+.nav-underline:hover::after,
+.nav-underline.is-active::after {
+  width: 100%;
+}

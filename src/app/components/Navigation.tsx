@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
@@ -20,24 +20,29 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              About Us
-            </Link>
-            <Link to="/books" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              Our Books
-            </Link>
-            <Link to="/impact" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              Our Impact
-            </Link>
-            <Link to="/gallery" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              Gallery
-            </Link>
-            <Link to="/contact" className="text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors">
-              Contact
-            </Link>
+            {[
+              { to: '/', label: 'Home', end: true },
+              { to: '/about', label: 'About Us' },
+              { to: '/books', label: 'Our Books' },
+              { to: '/impact', label: 'Our Impact' },
+              { to: '/gallery', label: 'Gallery' },
+              { to: '/contact', label: 'Contact' },
+            ].map(({ to, label, end }) => (
+              <NavLink
+                key={to}
+                to={to}
+                end={end}
+                className={({ isActive }) =>
+                  `nav-underline transition-colors ${
+                    isActive
+                      ? 'text-[var(--kidspedia-green)] font-semibold is-active'
+                      : 'text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]'
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
             <Link
               to="/get-involved"
               className="bg-[var(--kidspedia-yellow)] text-[var(--kidspedia-charcoal)] px-6 py-2.5 rounded-full hover:bg-[var(--kidspedia-green)] hover:text-white transition-all shadow-md"
@@ -61,21 +66,28 @@ export function Navigation() {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-3">
             {[
-              { to: '/', label: 'Home' },
+              { to: '/', label: 'Home', end: true },
               { to: '/about', label: 'About Us' },
               { to: '/books', label: 'Our Books' },
               { to: '/impact', label: 'Our Impact' },
               { to: '/gallery', label: 'Gallery' },
               { to: '/contact', label: 'Contact' },
-            ].map(({ to, label }) => (
-              <Link
+            ].map(({ to, label, end }) => (
+              <NavLink
                 key={to}
                 to={to}
+                end={end}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-left py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]"
+                className={({ isActive }) =>
+                  `block w-full text-left py-2 transition-colors ${
+                    isActive
+                      ? 'text-[var(--kidspedia-green)] font-semibold border-l-2 border-[var(--kidspedia-green)] pl-2'
+                      : 'text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)]'
+                  }`
+                }
               >
                 {label}
-              </Link>
+              </NavLink>
             ))}
             <Link
               to="/get-involved"
