@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dark, setDark] = useState(() =>
+    typeof window !== 'undefined'
+      ? document.documentElement.classList.contains('dark')
+      : false
+  );
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
@@ -49,6 +59,13 @@ export function Navigation() {
             >
               Get Involved
             </Link>
+            <button
+              onClick={() => setDark(d => !d)}
+              className="p-2 rounded-lg text-[var(--kidspedia-charcoal)] hover:bg-gray-100 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {dark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,6 +113,13 @@ export function Navigation() {
             >
               Get Involved
             </Link>
+            <button
+              onClick={() => setDark(d => !d)}
+              className="flex items-center gap-2 py-2 text-[var(--kidspedia-charcoal)] hover:text-[var(--kidspedia-green)] transition-colors text-sm"
+            >
+              {dark ? <Sun size={18} /> : <Moon size={18} />}
+              {dark ? 'Light mode' : 'Dark mode'}
+            </button>
           </div>
         </div>
       )}

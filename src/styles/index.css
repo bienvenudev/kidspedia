@@ -26,3 +26,53 @@ body {
 .nav-underline.is-active::after {
   width: 100%;
 }
+
+/* ===================
+   DARK MODE OVERRIDES
+   =================== */
+
+html.dark {
+  --kidspedia-light-green: #1c2e24;
+  --kidspedia-light-yellow: #2a2210;
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0d1117;
+}
+
+/* Navigation */
+html.dark nav {
+  background-color: #161c27 !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Section / card backgrounds */
+html.dark .bg-white { background-color: #1e2430 !important; }
+html.dark .bg-gray-50 { background-color: #161c27 !important; }
+html.dark .bg-gray-100 { background-color: #1e2430 !important; }
+html.dark .bg-amber-50 { background-color: #2a2014 !important; }
+
+/* Text */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4 {
+  color: #f0f6fc;
+}
+html.dark .text-gray-700 { color: #c9d1d9 !important; }
+html.dark .text-gray-600 { color: #8b949e !important; }
+html.dark .text-gray-500 { color: #6e7681 !important; }
+html.dark blockquote p { color: #e6edf3 !important; }
+html.dark blockquote footer { color: #8b949e !important; }
+
+/* Borders */
+html.dark .border-gray-200 { border-color: #30363d !important; }
+html.dark .border-gray-100 { border-color: #21262d !important; }
+html.dark .border-t { border-color: #30363d; }
+html.dark .border-b { border-color: #30363d; }
+
+/* Shadows */
+html.dark .shadow-lg { box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5) !important; }
+html.dark .shadow-md { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important; }
+html.dark .shadow-sm { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important; }
