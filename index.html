@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kidspedia – Empowering Children, Uplifting Women</title>
-    <meta name="description" content="Kidspedia creates multilingual children's books in French, English and Kinyarwanda that fund women's empowerment in Rwanda." />
+    <meta name="description" content="Kidspedia creates children's books that fund women's empowerment in Rwanda. Currently in English, with French and Kinyarwanda editions coming soon." />
+    <script>
+      // Apply dark mode before React loads to prevent flash
+      (function () {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
