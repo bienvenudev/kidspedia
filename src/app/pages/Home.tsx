@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Hero } from '../components/Hero';
-import { BookOpen, Users, Globe, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Home() {
   return (
@@ -11,7 +11,7 @@ export function Home() {
       <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
                 src="/assets/Suzanne-in-community-outreach.jpg"
                 alt="Suzanne during community outreach"
@@ -24,32 +24,17 @@ export function Home() {
                 About <span className="text-[var(--kidspedia-green)]">Kidspedia</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Kidspedia is an international platform of education professionals dedicated to creating multilingual children's learning materials that spark joy and foster growth.
-              </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Based in Kigali, Rwanda, we exist at the intersection of childhood education and women's empowerment.
-              </p>
+                Kidspedia is an international platform of education professionals dedicated to creating multilingual children's learning materials that spark joy and foster growth.              </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center">
-                  <div className="bg-[var(--kidspedia-light-green)] p-3 rounded-xl mb-2 inline-block">
-                    <BookOpen className="text-[var(--kidspedia-green)]" size={24} />
-                  </div>
-                  <p className="text-sm text-gray-600">Multilingual Learning</p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-[var(--kidspedia-light-yellow)] p-3 rounded-xl mb-2 inline-block">
-                    <Users className="text-[var(--kidspedia-yellow)]" size={24} />
-                  </div>
-                  <p className="text-sm text-gray-600">Women's Empowerment</p>
-                </div>
-                <div className="text-center">
-                  <div className="bg-blue-50 p-3 rounded-xl mb-2 inline-block">
-                    <Globe className="text-[var(--kidspedia-sky-blue)]" size={24} />
-                  </div>
-                  <p className="text-sm text-gray-600">Global Impact</p>
-                </div>
-              </div>
+              {/* Pull quote */}
+              <blockquote className="border-l-4 border-[var(--kidspedia-green)] pl-5 mb-8">
+                <p className="text-xl text-[var(--kidspedia-charcoal)] italic leading-relaxed">
+                  "Every book is a bridge — between a child's curiosity and the world, and between a mother's hard work and her family's future."
+                </p>
+                <footer className="mt-3 text-sm text-gray-500 not-italic">
+                  — Suzanne Uwabera, Founder
+                </footer>
+              </blockquote>
 
               <Link
                 to="/about"
@@ -72,13 +57,13 @@ export function Home() {
             </h2>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-0 items-center">
-              <div className="p-8 flex items-center justify-center bg-gradient-to-br from-[var(--kidspedia-light-yellow)] to-white">
+              <div className="p-8 flex items-center justify-center bg-amber-50">
                 <img
                   src="/assets/ABC OF ANAYA COVER.jpg"
                   alt="ABC of Anaya book cover"
-                  className="w-48 md:w-64 h-auto shadow-2xl rounded-2xl object-cover"
+                  className="w-48 md:w-64 h-auto shadow-xl rounded-xl object-cover"
                 />
               </div>
               <div className="p-8">
@@ -86,11 +71,11 @@ export function Home() {
                   ABC of Anaya: An Alphabet of Loving Affirmations
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  A beautiful children's affirmation and coloring book — currently in English, with French &amp; Kinyarwanda editions coming soon.
+                  A children's affirmation and coloring book, currently in English with French and Kinyarwanda editions coming soon.
                 </p>
                 <Link
                   to="/books"
-                  className="inline-flex items-center gap-2 bg-[var(--kidspedia-green)] text-white px-6 py-3 rounded-full hover:bg-[var(--kidspedia-green)]/90 transition-all"
+                  className="inline-flex items-center gap-2 bg-[var(--kidspedia-green)] text-white px-6 py-3 rounded-lg hover:bg-[var(--kidspedia-green)]/90 transition-all"
                 >
                   View All Books
                   <ArrowRight size={20} />
@@ -118,9 +103,9 @@ export function Home() {
               { number: '1,500+', label: 'Books Distributed', color: 'text-[var(--kidspedia-sky-blue)]' },
               { number: '100%', label: 'Profits to Community', color: 'text-[var(--kidspedia-green)]' },
             ].map(({ number, label, color }) => (
-              <div key={label} className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 rounded-2xl p-6 text-center">
+              <div key={label} className="border border-gray-200 rounded-xl p-6 text-center">
                 <div className={`text-4xl font-bold ${color} mb-2`}>{number}</div>
-                <div className="text-gray-600">{label}</div>
+                <div className="text-gray-600 text-sm">{label}</div>
               </div>
             ))}
           </div>

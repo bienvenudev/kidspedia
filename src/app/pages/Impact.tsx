@@ -24,7 +24,7 @@ export function Impact() {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl p-6 text-center hover:shadow-xl transition-all">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">
                 <div className={`${stat.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className="text-white" size={28} />
                 </div>
@@ -35,7 +35,7 @@ export function Impact() {
           </div>
 
           {/* Community Outreach Feature */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl mb-12">
+          <div className="rounded-2xl overflow-hidden shadow-md mb-12">
             <div className="grid md:grid-cols-2 items-center">
               <img
                 src="/assets/Suzanne-in-community-outreach.jpg"
@@ -58,14 +58,14 @@ export function Impact() {
 
           {/* Community Photos */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+            <div className="rounded-xl overflow-hidden shadow-sm">
               <img
                 src="/assets/Community-Outreach.jpg"
                 alt="Kidspedia community outreach event"
                 className="w-full h-72 object-cover"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+            <div className="rounded-xl overflow-hidden shadow-sm">
               <img
                 src="/assets/IMG-20241011-WA0040.jpg"
                 alt="Kidspedia community event"

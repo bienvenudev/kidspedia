@@ -16,7 +16,7 @@ export function Books() {
           </div>
 
           {/* Featured Book */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-12">
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden mb-12">
             <div className="grid md:grid-cols-2 gap-0 items-center">
               {/* Book Cover */}
               <div className="p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-[var(--kidspedia-light-yellow)] to-white">
@@ -71,7 +71,7 @@ export function Books() {
           </div>
 
           {/* Copies / In the Community */}
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0 items-center">
               <div className="p-8 md:p-12 order-2 md:order-1">
                 <h3 className="text-2xl font-bold text-[var(--kidspedia-charcoal)] mb-4">

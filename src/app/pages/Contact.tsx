@@ -50,7 +50,7 @@ export function Contact() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {contactOptions.map((option, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all border-2 border-transparent hover:border-[var(--kidspedia-green)]">
+              <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[var(--kidspedia-green)] transition-colors">
                 <div className="flex items-start gap-4">
                   <div className={`${option.color} p-3 rounded-xl flex-shrink-0`}>
                     <option.icon
@@ -75,7 +75,7 @@ export function Contact() {
             ))}
           </div>
 
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 max-w-3xl mx-auto">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
             <div className="grid sm:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-[var(--kidspedia-green)] w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">

@@ -30,7 +30,7 @@ export function GetInvolved() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Buy a Book */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all border-2 border-transparent hover:border-[var(--kidspedia-green)]">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:border-[var(--kidspedia-green)] transition-colors">
               <div className="bg-gradient-to-br from-[var(--kidspedia-green)] to-[var(--kidspedia-green)]/80 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <ShoppingBag className="text-white" size={32} />
               </div>
@@ -56,7 +56,7 @@ export function GetInvolved() {
             </div>
 
             {/* Sponsor Books */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all border-2 border-transparent hover:border-[var(--kidspedia-yellow)]">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:border-[var(--kidspedia-yellow)] transition-colors">
               <div className="bg-gradient-to-br from-[var(--kidspedia-yellow)] to-[var(--kidspedia-yellow)]/80 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <Gift className="text-[var(--kidspedia-charcoal)]" size={32} />
               </div>
@@ -81,7 +81,7 @@ export function GetInvolved() {
             </div>
 
             {/* Spread the Word */}
-            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all border-2 border-transparent hover:border-[var(--kidspedia-sky-blue)]">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:border-[var(--kidspedia-sky-blue)] transition-colors">
               <div className="bg-gradient-to-br from-[var(--kidspedia-sky-blue)] to-[var(--kidspedia-sky-blue)]/80 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
                 <Share2 className="text-white" size={32} />
               </div>
