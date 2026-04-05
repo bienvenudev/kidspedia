@@ -96,12 +96,11 @@ export function Home() {
             <p className="text-lg text-gray-700">Creating real change in the lives of women and children across Rwanda.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               { number: '300+', label: 'Families Supported', color: 'text-[var(--kidspedia-green)]' },
               { number: '1,000', label: 'Women Targeted', color: 'text-[var(--kidspedia-yellow)]' },
               { number: '1,500+', label: 'Books Distributed', color: 'text-[var(--kidspedia-sky-blue)]' },
-              { number: '100%', label: 'Profits to Community', color: 'text-[var(--kidspedia-green)]' },
             ].map(({ number, label, color }) => (
               <div key={label} className="border border-gray-200 rounded-xl p-6 text-center">
                 <div className={`text-4xl font-bold ${color} mb-2`}>{number}</div>

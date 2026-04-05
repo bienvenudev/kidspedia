@@ -1,10 +1,9 @@
-import { Users, Target, BookHeart, TrendingUp } from 'lucide-react';
+import { Users, Target, BookHeart } from 'lucide-react';
 
 const stats = [
   { icon: Users, number: '300+', label: 'Families Supported', color: 'bg-[var(--kidspedia-green)]' },
   { icon: Target, number: '1,000', label: 'Women Targeted in Q2', color: 'bg-[var(--kidspedia-yellow)]' },
   { icon: BookHeart, number: '1,500+', label: 'Books Distributed', color: 'bg-[var(--kidspedia-sky-blue)]' },
-  { icon: TrendingUp, number: '100%', label: 'Profits to Community', color: 'bg-[var(--kidspedia-green)]' },
 ];
 
 export function Impact() {
@@ -22,7 +21,7 @@ export function Impact() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">
                 <div className={`${stat.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -49,8 +48,11 @@ export function Impact() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   Every purchase of a Kidspedia book directly supports low-income women in Rwanda, including construction site workers who are building a better future for their families.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
                   Through community workshops and book distribution events, we bring learning materials to children while creating sustainable income opportunities for mothers and caregivers.
+                </p>
+                <p className="text-base text-gray-500 leading-relaxed">
+                  A meaningful share of every sale goes directly back into community programs — we'll share a full breakdown as our impact data grows.
                 </p>
               </div>
             </div>
