@@ -2,6 +2,10 @@
 @import './tailwind.css';
 @import './theme.css';
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 /* Sliding underline nav effect */
 .nav-underline {
   position: relative;
